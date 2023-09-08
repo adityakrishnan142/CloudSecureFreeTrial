@@ -1,10 +1,14 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Metadata:
+    Generator: "former2"
+Description: "Run AWS amplify hellow world app"
 Resources:
   HelloWorldAmplifyApp:
     Type: 'AWS::Amplify::App'
     Properties:
       Name: HelloWorldAmplifyApp
-      Repository: https://github.com/your-username/your-repo-name  # Replace with your GitHub Repository URL
-      AccessToken: !Ref GitHubOAuthToken
+      Repository: https://github.com/adityakrishnan142/CloudSecureFreeTrial  # Replace with your GitHub Repository URL
+      AccessToken: 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
 
 Parameters:
   GitHubOAuthToken:
