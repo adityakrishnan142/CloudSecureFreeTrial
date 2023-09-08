@@ -1,0 +1,17 @@
+Resources:
+  HelloWorldAmplifyApp:
+    Type: 'AWS::Amplify::App'
+    Properties:
+      Name: HelloWorldAmplifyApp
+      Repository: https://github.com/your-username/your-repo-name  # Replace with your GitHub Repository URL
+      AccessToken: !Ref GitHubOAuthToken
+
+Parameters:
+  GitHubOAuthToken:
+    Type: String
+    Description: GitHub OAuth token for accessing the repository.
+
+Outputs:
+  HelloWorldAmplifyAppId:
+    Description: Amplify App Id
+    Value: !Ref HelloWorldAmplifyApp
